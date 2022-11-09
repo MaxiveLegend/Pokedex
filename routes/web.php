@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/pokemon/{name}', function ($name){
+    return view('pokemon', ['name' => $name]);
 });
