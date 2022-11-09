@@ -2,5 +2,5 @@
 @section('title', 'Pokedex')
 
 @section('content')
-    <pokedex></pokedex>
+    <pokedex/>
 @endsection

@@ -17498,16 +17498,51 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      properties: []
+      properties: [],
+      imgUrl: "",
+      height: 0,
+      weight: 0
     };
+  },
+  methods: {
+    convertValue: function convertValue(value) {
+      var convertedVal = value.toString();
+      var position = convertedVal.length - 1;
+      return [convertedVal.slice(0, position), ',', convertedVal.slice(position)].join('');
+    }
   },
   mounted: function mounted() {
     var _this = this;
     axios.get("https://pokeapi.co/api/v2/pokemon/" + this.name).then(function (r) {
       return _this.properties = r.data;
+    }).then(function () {
+      _this.imgUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + _this.properties.id + ".png";
+      _this.dualType = _this.properties.types.length > 1;
+      _this.weight = _this.convertValue(_this.properties.weight);
+      _this.height = _this.convertValue(_this.properties.height);
     })["catch"](function (err) {
       return console.log(err);
     });
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/PokemonStats.vue?vue&type=script&lang=js":
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/PokemonStats.vue?vue&type=script&lang=js ***!
+  \******************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "PokemonStats",
+  props: {
+    stats: Object
   }
 });
 
@@ -17589,10 +17624,111 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "text-5xl font-medium mb-5"
+  "class": "flex"
+};
+var _hoisted_2 = {
+  key: 0,
+  "class": "text-4xl font-semibold"
+};
+var _hoisted_3 = {
+  "class": "text-5xl font-medium mb-5 flex-grow text-center w-100"
+};
+var _hoisted_4 = {
+  key: 1,
+  "class": "text-4xl semifont-bold"
+};
+var _hoisted_5 = {
+  "class": "bg-stone-700 grid grid-cols-5 grid-rows-6 rounded-lg gap-4 p-4"
+};
+var _hoisted_6 = {
+  "class": "bg-stone-800 rounded-lg col-span-2 row-span-6 grid justify-center content-center"
+};
+var _hoisted_7 = ["src"];
+var _hoisted_8 = {
+  "class": "bg-stone-800 rounded-lg grid justify-center content-center"
+};
+var _hoisted_9 = {
+  "class": "text-3xl h-min"
+};
+var _hoisted_10 = {
+  "class": "bg-stone-800 rounded-lg col-span-2 row-span-6 px-4"
+};
+var _hoisted_11 = {
+  "class": "bg-stone-800 rounded-lg grid justify-center content-center"
+};
+var _hoisted_12 = {
+  "class": "text-3xl h-min text-center"
+};
+var _hoisted_13 = {
+  "class": "bg-stone-800 rounded-lg grid row-span-2 justify-center content-center"
+};
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "text-3xl h-min text-center"
+}, "Types: ", -1 /* HOISTED */);
+var _hoisted_15 = {
+  "class": "text-3xl h-min text-center"
+};
+var _hoisted_16 = {
+  "class": "bg-stone-800 rounded-lg row-span-2 grid justify-center content-center"
+};
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "text-3xl h-min text-center"
+}, "Height / weight: ", -1 /* HOISTED */);
+var _hoisted_18 = {
+  "class": "text-3xl h-min text-center"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("h1", _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.name), 1 /* TEXT */);
+  var _component_pokemon_stats = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("pokemon-stats");
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_1, [$data.properties.id > 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_2, "⇐")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.properties.id) + ". " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.name), 1 /* TEXT */), $data.properties.id < 811 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_4, "⇒")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: this.imgUrl,
+    alt: ""
+  }, null, 8 /* PROPS */, _hoisted_7)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_9, "#" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.properties.id), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_pokemon_stats, {
+    stats: this.properties.stats
+  }, null, 8 /* PROPS */, ["stats"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_12, "name: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.properties.name), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [_hoisted_14, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(this.properties.types, function (type) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(type.type.name), 1 /* TEXT */);
+  }), 256 /* UNKEYED_FRAGMENT */))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.height) + "m / " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.weight) + "Kg ", 1 /* TEXT */)])])], 64 /* STABLE_FRAGMENT */);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/PokemonStats.vue?vue&type=template&id=5b637177":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/PokemonStats.vue?vue&type=template&id=5b637177 ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  "class": "flex flex-col justify-around h-full"
+};
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
+  "class": "text-3xl h-min text-center"
+}, "stats", -1 /* HOISTED */);
+var _hoisted_3 = {
+  "class": "grid gap-2 grid-cols-7"
+};
+var _hoisted_4 = {
+  "class": "grid content-center font-semibold col-span-2 bg-stone-700 rounded-lg px-2"
+};
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "w-full h-full bg-stone-700 h-10 rounded-lg col-span-5"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "bg-blue-600 h-full rounded-lg",
+  style: {
+    "width": "45%"
+  }
+})], -1 /* HOISTED */);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(this.stats, function (stat) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(stat.stat.name) + ": ", 1 /* TEXT */), _hoisted_5]);
+  }), 256 /* UNKEYED_FRAGMENT */))]);
 }
 
 /***/ }),
@@ -17610,6 +17746,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Pokedex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Pokedex */ "./resources/js/components/Pokedex.vue");
 /* harmony import */ var _components_Pokemon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Pokemon */ "./resources/js/components/Pokemon.vue");
 /* harmony import */ var _components_ClickablePokemon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/ClickablePokemon */ "./resources/js/components/ClickablePokemon.vue");
+/* harmony import */ var _components_PokemonStats__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/PokemonStats */ "./resources/js/components/PokemonStats.vue");
+
 
 
 
@@ -17619,6 +17757,7 @@ var app = (0,vue__WEBPACK_IMPORTED_MODULE_1__.createApp)({});
 app.component('pokedex', _components_Pokedex__WEBPACK_IMPORTED_MODULE_2__["default"]);
 app.component('pokemon', _components_Pokemon__WEBPACK_IMPORTED_MODULE_3__["default"]);
 app.component('clickable-pokemon', _components_ClickablePokemon__WEBPACK_IMPORTED_MODULE_4__["default"]);
+app.component('pokemon-stats', _components_PokemonStats__WEBPACK_IMPORTED_MODULE_5__["default"]);
 app.mount('#app');
 
 /***/ }),
@@ -37257,6 +37396,34 @@ if (false) {}
 
 /***/ }),
 
+/***/ "./resources/js/components/PokemonStats.vue":
+/*!**************************************************!*\
+  !*** ./resources/js/components/PokemonStats.vue ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _PokemonStats_vue_vue_type_template_id_5b637177__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PokemonStats.vue?vue&type=template&id=5b637177 */ "./resources/js/components/PokemonStats.vue?vue&type=template&id=5b637177");
+/* harmony import */ var _PokemonStats_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PokemonStats.vue?vue&type=script&lang=js */ "./resources/js/components/PokemonStats.vue?vue&type=script&lang=js");
+/* harmony import */ var C_Users_15424_OneDrive_Documents_Jetbrains_projects_PhpStorm_pokedex_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,C_Users_15424_OneDrive_Documents_Jetbrains_projects_PhpStorm_pokedex_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_PokemonStats_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_PokemonStats_vue_vue_type_template_id_5b637177__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/PokemonStats.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
 /***/ "./resources/js/components/ClickablePokemon.vue?vue&type=script&lang=js":
 /*!******************************************************************************!*\
   !*** ./resources/js/components/ClickablePokemon.vue?vue&type=script&lang=js ***!
@@ -37305,6 +37472,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/PokemonStats.vue?vue&type=script&lang=js":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/PokemonStats.vue?vue&type=script&lang=js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PokemonStats_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PokemonStats_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./PokemonStats.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/PokemonStats.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
 /***/ "./resources/js/components/ClickablePokemon.vue?vue&type=template&id=e24c8508":
 /*!************************************************************************************!*\
   !*** ./resources/js/components/ClickablePokemon.vue?vue&type=template&id=e24c8508 ***!
@@ -37349,6 +37532,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Pokemon_vue_vue_type_template_id_257bc4b8__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Pokemon_vue_vue_type_template_id_257bc4b8__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Pokemon.vue?vue&type=template&id=257bc4b8 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Pokemon.vue?vue&type=template&id=257bc4b8");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/PokemonStats.vue?vue&type=template&id=5b637177":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/PokemonStats.vue?vue&type=template&id=5b637177 ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PokemonStats_vue_vue_type_template_id_5b637177__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PokemonStats_vue_vue_type_template_id_5b637177__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./PokemonStats.vue?vue&type=template&id=5b637177 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/PokemonStats.vue?vue&type=template&id=5b637177");
 
 
 /***/ }),
