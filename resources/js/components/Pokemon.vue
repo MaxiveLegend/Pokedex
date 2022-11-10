@@ -27,6 +27,8 @@
             <p class="text-3xl h-min text-center">{{this.height}}m / {{this.weight}}Kg </p>
         </div>
     </section>
+
+    <pokemon-moves :moves="this.properties.moves"/>
 </template>
 
 <script>
@@ -39,7 +41,7 @@ export default {
 
     data() {
         return{
-            properties: [],
+            properties: {},
             imgUrl: "",
             height: 0,
             weight: 0,
