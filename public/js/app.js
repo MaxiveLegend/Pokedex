@@ -17543,6 +17543,11 @@ __webpack_require__.r(__webpack_exports__);
   name: "PokemonStats",
   props: {
     stats: Object
+  },
+  methods: {
+    calculateStatPercentage: function calculateStatPercentage(value) {
+      return value / 252 * 100;
+    }
   }
 });
 
@@ -17627,66 +17632,58 @@ var _hoisted_1 = {
   "class": "flex"
 };
 var _hoisted_2 = {
-  key: 0,
-  "class": "text-4xl font-semibold"
-};
-var _hoisted_3 = {
   "class": "text-5xl font-medium mb-5 flex-grow text-center w-100"
 };
-var _hoisted_4 = {
-  key: 1,
-  "class": "text-4xl semifont-bold"
-};
-var _hoisted_5 = {
+var _hoisted_3 = {
   "class": "bg-stone-700 grid grid-cols-5 grid-rows-6 rounded-lg gap-4 p-4"
 };
-var _hoisted_6 = {
+var _hoisted_4 = {
   "class": "bg-stone-800 rounded-lg col-span-2 row-span-6 grid justify-center content-center"
 };
-var _hoisted_7 = ["src"];
-var _hoisted_8 = {
+var _hoisted_5 = ["src"];
+var _hoisted_6 = {
   "class": "bg-stone-800 rounded-lg grid justify-center content-center"
 };
-var _hoisted_9 = {
+var _hoisted_7 = {
   "class": "text-3xl h-min"
 };
-var _hoisted_10 = {
+var _hoisted_8 = {
   "class": "bg-stone-800 rounded-lg col-span-2 row-span-6 px-4"
 };
-var _hoisted_11 = {
+var _hoisted_9 = {
   "class": "bg-stone-800 rounded-lg grid justify-center content-center"
 };
-var _hoisted_12 = {
+var _hoisted_10 = {
   "class": "text-3xl h-min text-center"
 };
-var _hoisted_13 = {
+var _hoisted_11 = {
   "class": "bg-stone-800 rounded-lg grid row-span-2 justify-center content-center"
 };
-var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-3xl h-min text-center"
 }, "Types: ", -1 /* HOISTED */);
-var _hoisted_15 = {
+var _hoisted_13 = {
   "class": "text-3xl h-min text-center"
 };
-var _hoisted_16 = {
+var _hoisted_14 = {
   "class": "bg-stone-800 rounded-lg row-span-2 grid justify-center content-center"
 };
-var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-3xl h-min text-center"
 }, "Height / weight: ", -1 /* HOISTED */);
-var _hoisted_18 = {
+var _hoisted_16 = {
   "class": "text-3xl h-min text-center"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_pokemon_stats = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("pokemon-stats");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_1, [$data.properties.id > 1 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_2, "⇐")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.properties.id) + ". " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.name), 1 /* TEXT */), $data.properties.id < 811 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_4, "⇒")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <p v-if=\"properties.id > 1\" class=\"text-4xl font-semibold\">&lArr;</p>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.properties.id) + ". " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.name), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <p v-if=\"properties.id < 811\" class=\"text-4xl semifont-bold\">&rArr;</p>")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     src: this.imgUrl,
     alt: ""
-  }, null, 8 /* PROPS */, _hoisted_7)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_9, "#" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.properties.id), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_pokemon_stats, {
+  }, null, 8 /* PROPS */, _hoisted_5)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_7, "#" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.properties.id), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_pokemon_stats, {
     stats: this.properties.stats
-  }, null, 8 /* PROPS */, ["stats"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_12, "name: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.properties.name), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [_hoisted_14, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(this.properties.types, function (type) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(type.type.name), 1 /* TEXT */);
-  }), 256 /* UNKEYED_FRAGMENT */))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.height) + "m / " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.weight) + "Kg ", 1 /* TEXT */)])])], 64 /* STABLE_FRAGMENT */);
+  }, null, 8 /* PROPS */, ["stats"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_10, "name: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.properties.name), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [_hoisted_12, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(this.properties.types, function (type) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(type.type.name), 1 /* TEXT */);
+  }), 256 /* UNKEYED_FRAGMENT */))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.height) + "m / " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.weight) + "Kg ", 1 /* TEXT */)])])], 64 /* STABLE_FRAGMENT */);
 }
 
 /***/ }),
@@ -17716,18 +17713,18 @@ var _hoisted_3 = {
 var _hoisted_4 = {
   "class": "grid content-center font-semibold col-span-2 bg-stone-700 rounded-lg px-2"
 };
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_5 = {
   "class": "w-full h-full bg-stone-700 h-10 rounded-lg col-span-5"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "bg-blue-600 h-full rounded-lg",
-  style: {
-    "width": "45%"
-  }
-})], -1 /* HOISTED */);
-
+};
+var _hoisted_6 = {
+  "class": "ml-2 text-xl"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(this.stats, function (stat) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(stat.stat.name) + ": ", 1 /* TEXT */), _hoisted_5]);
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(stat.stat.name) + ": ", 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+      "class": "bg-stone-600 h-full rounded-lg grid content-center",
+      style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)('width: ' + $options.calculateStatPercentage(stat.base_stat) + '%')
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(stat.base_stat), 1 /* TEXT */)], 4 /* STYLE */)])]);
   }), 256 /* UNKEYED_FRAGMENT */))]);
 }
 
@@ -37325,13 +37322,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _ClickablePokemon_vue_vue_type_template_id_e24c8508__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ClickablePokemon.vue?vue&type=template&id=e24c8508 */ "./resources/js/components/ClickablePokemon.vue?vue&type=template&id=e24c8508");
 /* harmony import */ var _ClickablePokemon_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ClickablePokemon.vue?vue&type=script&lang=js */ "./resources/js/components/ClickablePokemon.vue?vue&type=script&lang=js");
-/* harmony import */ var C_Users_15424_OneDrive_Documents_Jetbrains_projects_PhpStorm_pokedex_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var D_JetBrains_PhpStorm_Projects_Pokedex_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_15424_OneDrive_Documents_Jetbrains_projects_PhpStorm_pokedex_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_ClickablePokemon_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ClickablePokemon_vue_vue_type_template_id_e24c8508__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/ClickablePokemon.vue"]])
+const __exports__ = /*#__PURE__*/(0,D_JetBrains_PhpStorm_Projects_Pokedex_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_ClickablePokemon_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ClickablePokemon_vue_vue_type_template_id_e24c8508__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/ClickablePokemon.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -37353,13 +37350,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Pokedex_vue_vue_type_template_id_38e02443__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Pokedex.vue?vue&type=template&id=38e02443 */ "./resources/js/components/Pokedex.vue?vue&type=template&id=38e02443");
 /* harmony import */ var _Pokedex_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Pokedex.vue?vue&type=script&lang=js */ "./resources/js/components/Pokedex.vue?vue&type=script&lang=js");
-/* harmony import */ var C_Users_15424_OneDrive_Documents_Jetbrains_projects_PhpStorm_pokedex_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var D_JetBrains_PhpStorm_Projects_Pokedex_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_15424_OneDrive_Documents_Jetbrains_projects_PhpStorm_pokedex_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Pokedex_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Pokedex_vue_vue_type_template_id_38e02443__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/Pokedex.vue"]])
+const __exports__ = /*#__PURE__*/(0,D_JetBrains_PhpStorm_Projects_Pokedex_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Pokedex_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Pokedex_vue_vue_type_template_id_38e02443__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/Pokedex.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -37381,13 +37378,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Pokemon_vue_vue_type_template_id_257bc4b8__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Pokemon.vue?vue&type=template&id=257bc4b8 */ "./resources/js/components/Pokemon.vue?vue&type=template&id=257bc4b8");
 /* harmony import */ var _Pokemon_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Pokemon.vue?vue&type=script&lang=js */ "./resources/js/components/Pokemon.vue?vue&type=script&lang=js");
-/* harmony import */ var C_Users_15424_OneDrive_Documents_Jetbrains_projects_PhpStorm_pokedex_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var D_JetBrains_PhpStorm_Projects_Pokedex_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_15424_OneDrive_Documents_Jetbrains_projects_PhpStorm_pokedex_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Pokemon_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Pokemon_vue_vue_type_template_id_257bc4b8__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/Pokemon.vue"]])
+const __exports__ = /*#__PURE__*/(0,D_JetBrains_PhpStorm_Projects_Pokedex_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Pokemon_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Pokemon_vue_vue_type_template_id_257bc4b8__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/Pokemon.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -37409,13 +37406,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _PokemonStats_vue_vue_type_template_id_5b637177__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PokemonStats.vue?vue&type=template&id=5b637177 */ "./resources/js/components/PokemonStats.vue?vue&type=template&id=5b637177");
 /* harmony import */ var _PokemonStats_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PokemonStats.vue?vue&type=script&lang=js */ "./resources/js/components/PokemonStats.vue?vue&type=script&lang=js");
-/* harmony import */ var C_Users_15424_OneDrive_Documents_Jetbrains_projects_PhpStorm_pokedex_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var D_JetBrains_PhpStorm_Projects_Pokedex_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_Users_15424_OneDrive_Documents_Jetbrains_projects_PhpStorm_pokedex_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_PokemonStats_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_PokemonStats_vue_vue_type_template_id_5b637177__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/PokemonStats.vue"]])
+const __exports__ = /*#__PURE__*/(0,D_JetBrains_PhpStorm_Projects_Pokedex_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_PokemonStats_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_PokemonStats_vue_vue_type_template_id_5b637177__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/PokemonStats.vue"]])
 /* hot reload */
 if (false) {}
 
