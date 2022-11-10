@@ -17507,6 +17507,7 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     convertValue: function convertValue(value) {
       var convertedVal = value.toString();
+      if (convertedVal.length == 1) convertedVal = '0' + convertedVal;
       var position = convertedVal.length - 1;
       return [convertedVal.slice(0, position), ',', convertedVal.slice(position)].join('');
     }
@@ -17676,7 +17677,7 @@ var _hoisted_16 = {
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_pokemon_stats = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("pokemon-stats");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <p v-if=\"properties.id > 1\" class=\"text-4xl font-semibold\">&lArr;</p>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.properties.id) + ". " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.name), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <p v-if=\"properties.id < 811\" class=\"text-4xl semifont-bold\">&rArr;</p>")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <p v-if=\"properties.id > 1\" class=\"text-4xl font-semibold\">&lArr;</p>"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.properties.id) + ". " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.properties.name), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("        <p v-if=\"properties.id < 811\" class=\"text-4xl semifont-bold\">&rArr;</p>")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     src: this.imgUrl,
     alt: ""
   }, null, 8 /* PROPS */, _hoisted_5)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_7, "#" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.properties.id), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_pokemon_stats, {

@@ -1,7 +1,7 @@
 <template>
     <header class="flex">
 <!--        <p v-if="properties.id > 1" class="text-4xl font-semibold">&lArr;</p>-->
-        <h1 class="text-5xl font-medium mb-5 flex-grow text-center w-100" >{{this.properties.id}}. {{this.name}}</h1>
+        <h1 class="text-5xl font-medium mb-5 flex-grow text-center w-100" >{{this.properties.id}}. {{this.properties.name}}</h1>
 <!--        <p v-if="properties.id < 811" class="text-4xl semifont-bold">&rArr;</p>-->
     </header>
 
@@ -48,7 +48,8 @@ export default {
 
     methods: {
         convertValue(value){
-            const convertedVal = value.toString()
+            let convertedVal = value.toString()
+            if(convertedVal.length == 1) convertedVal = '0' + convertedVal
             const position = convertedVal.length - 1;
             return [convertedVal.slice(0, position), ',', convertedVal.slice(position)].join('');
         }
